@@ -1,38 +1,226 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+.App{
+  color: #fff;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+
+}
+/* ------------ Header styling ------------ */
+
+
+/* Red Section with the logo styling  */
+#logo-section {
+  background-color: #B11226;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Navigation bars that appear on max-width media */
+#nav-bars{
+  padding: 0 40px;
+  display: none;
+  font-size: 24px;
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+#nav-bars:hover {
+  opacity: 0.7;
+}
+
+#logo{
+  font-family: 'Ranchers', cursive;
+  margin: 0;
+  padding: 0 40px;
+  text-transform: uppercase;
+  transition: all 500ms;
+  font-size: 24px;
+
+}
+
+#logo:hover {
+  opacity: 0.7;
+}
+
+
+/* Header navigation list styling */
+
+.App-header {
+  position: relative;
+}
+
+.App-header nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.App-header ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+.App-header ul li {
+  padding: 0 30px;
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+.App-header ul li:hover {
+  opacity: 0.5;
+}
+
+/* Navigation on smaller screens styling */
+
+.smallNav {
+  display: block !important;
+  transition: all 500ms;
+  
+}
+
+.smallNav ul {
+  margin: 0;
+  text-transform: uppercase;
+  background-color: rgb(177,18,38, 0.5);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
+.smallNav ul li {
+  padding: 10px 0;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.smallNav ul li a {
+  padding: 0 35px;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.smallNav ul li:hover{
+  background-color: #fff !important;
+  opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.smallNav ul li:hover a{
+  color: rgb(177,18,38);
+
+}
+
+
+/*  --------- SEARCHBAR SECTIONS COMPONENTS STYLES START HERE -------------- */
+
+#search-section {
+  text-align: center;
+  padding: 100px 0;
+}
+
+
+.search-bar{
+  height: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar  > * {
+  height: 100%;
+  margin: 0 5px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.search-bar input {
+  width: 250px;
+  border: none;
+  transition: all 500ms;
+}
+
+.search-bar input:focus {
+  outline: 4px solid #B11226;
+}
+
+.search-bar button {
+  width: 50px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.search-bar button:hover {
+  opacity: 0.7;
+}
+
+/* -------------------RECOMMENDED SECTION BEGINS HERE ---------------------- */
+
+#recommended-section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+/* Recommended text styling */
+#recommended-section h3 {
+  color: #B11226;
+}
+
+#sep-line {
+  border: 1px solid red;
+  border-radius: 2px;
+}
+
+
+
+/* Images lists movies list styling */
+
+.moviesBox{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 30px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.genreMoviesListImg{
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.imageBox{
+  margin: 0 20px;
+  height: 220px;
+  min-width: 150px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.imageBox:hover {
+  opacity: 0.7;
+}
+
+/* ------- MEDIA QUERIES ------------ */
+
+@media screen and (max-width: 710px){
+  #nav-bars {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  .App-header nav {
+    display: none;
   }
 }
