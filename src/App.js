@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header';
-import Recommended from './components/Recommended';
+import Recommended from './components/Recommended/Recommended';
 import Search from './components/Search'
 
 function App() {
