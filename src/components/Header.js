@@ -1,10 +1,11 @@
 import React from 'react'
 import {FaGripLines} from 'react-icons/fa'
 import {useState} from 'react'
+import {Link} from 'react-router-dom'
 
 const Header = () => {
 
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState('');
   
   const toggleMenu = () => {
     setMenu(!menu);
@@ -21,14 +22,11 @@ const Header = () => {
         </span>
         </section>
         
-        <nav className={menu && "smallNav"}>
+        <nav className={menu ? "smallNav" : undefined}>
         <ul>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/'>Genre</a></li>
-            <li><a href='/'>Country</a></li>
-            <li><a href='/'>Movies</a></li>
-            <li><a href='/'>TV Series</a></li>
-            <li><a href='/'>Top ImDb</a></li>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/movies'>Movies</Link></li>
+            <li><Link to='/series'>TV Series</Link></li>
         </ul>
         </nav>
         

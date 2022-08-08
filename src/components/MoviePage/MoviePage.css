@@ -1,0 +1,136 @@
+
+
+#movie-page {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 0 40px 0;
+    text-align: center;
+}
+
+/* Video styling */
+#movie-page .video-poster {
+    width: 100%;
+    opacity: 0.7;
+}
+
+.player-wrapper {
+    display: flex;
+    position: relative;
+    height: auto;
+    justify-content: center;
+}
+
+#poster-redirect{
+    display: block;
+    margin: auto;
+    max-width: 1200px;
+}
+
+
+#movie-page #play-button {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 100px;
+    transition: all 500ms;
+}
+#poster-redirect:hover #play-button {
+    opacity: 0.5;
+}
+
+/* Infobox styling */
+
+#info-wrapper {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+#movie-info-box{
+    background-color: #201F1F;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+
+#movie-info-box img{
+    max-width: 250px;
+    width:100%;
+    margin: 0 auto;
+}
+
+#movie-info-box div{
+    text-align: left;
+    padding: 0 20px;
+}
+#movie-info-box div p {
+    opacity: 0.7;
+}
+
+#movie-info-box h2 {
+    margin: 20px 0;
+}
+#movie-info-box div ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#movie-info-box div ul #grade-star{
+    color: #FFD700;
+}
+
+#movie-data {
+    margin: 40px 0;
+    background-color: #201F1F;
+    max-width: 50%;
+    text-align: left;
+    padding: 30px;
+}
+
+#movie-data ul li {
+    padding: 5px 0;
+}
+#movie-data ul li span {
+    opacity: 0.7;
+}
+
+/* Trending this week list styling */
+
+
+#recommended-movies-list h2{
+    margin: 0;
+    padding: 15px 0;
+
+}
+
+#recommended-movies-list img {
+    max-width: 200px;
+    height: 300px;
+    object-fit: cover;
+    transition: all 500ms;
+}
+
+#recommended-movies-list ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#recommended-movies-list ul li:hover img{
+    opacity: 0.7;
+}
+
+#recommended-movies-list ul {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+

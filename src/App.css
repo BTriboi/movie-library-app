@@ -70,9 +70,14 @@ a{
   flex-wrap: wrap;
 }
 .App-header ul li {
-  padding: 0 30px;
   transition: all 500ms;
   cursor: pointer;
+}
+
+.App-header ul li a {
+  padding: 10px 30px;
+  display: block;
+  width: 100%;
 }
 
 .App-header ul li:hover {
@@ -100,14 +105,13 @@ a{
 }
 
 .smallNav ul li {
-  padding: 10px 0;
   width: 100%;
   text-align: center;
 }
 
 .smallNav ul li a {
-  padding: 0 35px;
   width: 100%;
+  height: 100%;
 }
 
 .smallNav ul li:hover{
@@ -167,17 +171,15 @@ a{
   opacity: 0.7;
 }
 
-/* -------------------RECOMMENDED SECTION BEGINS HERE ---------------------- */
 
-#recommended-section {
+/* ---------- SECTION NAME TYPE STYLING -------- */
+#section-type-wrapper{
   width: 80%;
   margin: 0 auto;
 }
-
-
-/* Recommended text styling */
-#recommended-section h3 {
+#section-type-wrapper h3 {
   color: #B11226;
+  display: flex;
 }
 
 #sep-line {
@@ -186,35 +188,70 @@ a{
 }
 
 
+/* Pagination Buttons global styling */
 
-/* Images lists movies list styling */
-
-.moviesBox{
+.button-pager{
+  margin: 20px 0;
+  font-size: 20px;
   display: flex;
-  flex-direction: column;
-  padding: 30px 0;
+  align-items: center;
+  justify-content: center;
 }
 
-.genreMoviesListImg{
-  display: flex;
-  justify-content: flex-start;
-  overflow-x: scroll;
+.button-pager span {
+  margin: 0 15px;
 }
 
-.imageBox{
-  margin: 0 20px;
-  height: 220px;
-  min-width: 150px;
-  background-color: #fff;
+.button-pager div:hover {
+  opacity: 0.5;
   cursor: pointer;
-  transition: all 500ms;
 }
 
-.imageBox:hover {
+
+/* ---------- Footer styling ---------------*/
+#footer-section {
+  padding: 100px 0 30px 0;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+
+}
+
+#footer-section ul {
+  margin: 0;
+}
+
+#footer-section #footer-links .list-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+#footer-section #footer-links ul li a{
+  transition: all 500ms;
+  width: 100%;
+  display: block;
+  opacity: 0.7;
+  padding: 5px 0;
+}
+#footer-section #footer-links ul li a:hover {
+  opacity: 1;
+}
+
+
+#footer-section #footer-about p {
+  color: #b91b30;
+}
+
+#footer-section #footer-about span {
+  color: #fff;
   opacity: 0.7;
 }
 
-/* ------- MEDIA QUERIES ------------ */
+
+
+/* ----------- MEDIA QUERIES ------------ */
 
 @media screen and (max-width: 710px){
   #nav-bars {

@@ -1,0 +1,32 @@
+#discover-section {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+#movies-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.movie-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.movie-box:hover img {
+    opacity: 0.7;
+}
+
+.movie-box img {
+    height: 300px;
+    margin: 10px 0;
+    transition: all 500ms ease;
+
+}
