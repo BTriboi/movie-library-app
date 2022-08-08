@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, {useEffect, useState} from 'react'
-import MovieImageList from './MovieImageList'
+import MovieImageList from './MovieImageList/MovieImageList'
 import './Recommended.css'
 import Search  from './../Search';
 import SectionType from './../SectionType'

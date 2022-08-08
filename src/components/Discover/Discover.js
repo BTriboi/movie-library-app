@@ -13,7 +13,6 @@ const Discover = () => {
   function incrementPage (e){
     e.preventDefault();
     setPage(page+1);
-    console.log(page)
   }
 
   function decrementPage (e){

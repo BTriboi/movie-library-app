@@ -1,0 +1,38 @@
+.genreMoviesListImg div {
+    text-align: center;
+}
+.genreMoviesListImg div p {
+    max-width: 80%;
+    margin: 5px auto;
+}
+
+
+.moviesBox{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+  }
+  
+  .genreMoviesListImg{
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+
+  .imageBox {
+      transition: all 500ms;
+      cursor: pointer;
+  }
+
+  .imageBox:hover {
+    opacity: 0.7;
+  }
+  
+  
+  .imageBox img{
+    margin: 0 20px;
+    height: 220px;
+    min-width: 150px;
+    background-color: #fff;
+  }
+  

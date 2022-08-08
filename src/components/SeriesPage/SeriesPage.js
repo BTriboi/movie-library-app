@@ -35,7 +35,6 @@ const MoviePage = () => {
       setTrending(res.data.results);
     })
   }, [serieId]);
-console.log(movie)
 
   return (
     <section id="movie-page">

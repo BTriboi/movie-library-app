@@ -1,7 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
+import './MovieImageList.css'
 
 const MovieImageList = ({genre, id}) => {
+
+  let navigate = useNavigate();
 
   const [movies, setMovies] = useState([]);
 
@@ -17,9 +21,6 @@ const MovieImageList = ({genre, id}) => {
   }, [id]);
 
 
-
-console.log(movies);
-
   return (
 
     <div className="moviesBox">
@@ -31,7 +32,10 @@ console.log(movies);
 
           {movies.map((movie)=>{
             return(
-          <img src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" className='imageBox'/>
+              <div key={movie.id} onClick={()=> navigate(`/movie/${movie.id}`)} className='imageBox'>
+                <img  src={`http://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" />
+                <p>{movie.title}</p>
+              </div>
           )})}
 
 
