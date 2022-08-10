@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, {useState } from 'react'
 import {MdArrowForwardIos} from 'react-icons/md'
 import { useNavigate } from 'react-router'
 
@@ -7,14 +6,13 @@ const Search = ({searchId}) => {
  
   const [input, setInput] = useState('');
 
-  function handleSubmit(){
+  function handleSubmit(e){
+    e.preventDefault();
     searchId = input;
-    navigate(`/search/${searchId}`)
+    navigate(`/search/${searchId}`);
   }
+
   let navigate = useNavigate();
-  useEffect(()=>{
-    axios.get('')
-  },[])
 
   return (
     <section id="search-section">
